@@ -2,7 +2,7 @@ import ExploreBtn from "./../components/ExploreBtn";
 import EventCard from "@/components/EventCard";
 import events from "@/lib/constants";
 
-const page = () => {
+const Page = () => {
   return (
     <section>
       <h1 className="text-center">
@@ -27,4 +27,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
