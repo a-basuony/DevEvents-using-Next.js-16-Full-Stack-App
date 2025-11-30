@@ -49,10 +49,11 @@ const EventTags = ({ tags }: { tags: string[] }) => {
     </div>
   );
 };
-const EventDetails = async ({ params }: { params: Promise<string> }) => {
+
+const EventDetails = async ({ params }: { params: { slug: string } }) => {
   "use cache";
   cacheLife("hours");
-  const slug = await params;
+  const { slug } = params;
 
   const response = await fetch(`${BASE_URL}/api/events/${slug}`);
   const {
