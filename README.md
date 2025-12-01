@@ -10,6 +10,10 @@ Check out the live demo: [https://dev-events-next-js-16-six.vercel.app/](https:/
 
 GitHub repository: [https://github.com/a-basuony/DevEvents_Next.js_16](https://github.com/a-basuony/DevEvents_Next.js_16)
 
+
+  <img src="public/readme/readme-hero.webp" alt="Project Banner">   
+
+
 ---
 
 ## Table of Contents
