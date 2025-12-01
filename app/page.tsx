@@ -3,13 +3,18 @@ import ExploreBtn from "./../components/ExploreBtn";
 import EventCard from "@/components/EventCard";
 import { cacheLife } from "next/cache";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://dev-events-one-nu.vercel.app";
 
 const Page = async () => {
-  "use cache";
-  cacheLife("hours");
-  const response = await fetch(`${BASE_URL}/api/events`);
+  // "use cache";
+  // cacheLife("hours");
+  const response = await fetch(`${BASE_URL}/api/events`, {
+    cache: "no-store",
+  });
   const { events } = await response.json();
+
+  console.log("BASE_URL:", BASE_URL);
 
   return (
     <section>
